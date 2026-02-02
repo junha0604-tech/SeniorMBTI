@@ -1,15 +1,16 @@
 {
   "name": "seniormbti",
   "version": "1.0.0",
-  "description": "",
-  "homepage": "https://junha0604-tech.github.io/SeniorMBTI",
+  "description": "Senior MBTI personality analysis page for silver town types",
   "main": "main.js",
+  "homepage": "https://junha0604-tech.github.io/SeniorMBTI",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "rm -rf dist && mkdir dist && cp index.html style.css main.js dist/",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "junha0604-tech",
   "license": "ISC",
   "devDependencies": {
     "gh-pages": "^6.3.0"
