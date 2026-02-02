@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나는 어떤 실버타운 인간형일까?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-screen" class="container">
+        <h1>나는 어떤 실버타운 인간형일까?</h1>
+        <p>(웃자고 했는데 은근히 다 맞는 테스트)</p>
+        <button id="start-btn">테스트 시작</button>
+    </div>
+
+    <div id="question-screen" class="container" style="display: none;">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <h2 id="question-title"></h2>
+        <p id="question-text"></p>
+        <button class="answer-btn"></button>
+        <button class="answer-btn"></button>
+    </div>
+
+    <div id="result-screen" class="container" style="display: none;">
+        <h2 id="result-mbti"></h2>
+        <h3 id="result-title"></h3>
+        <p id="result-description"></p>
+        <p id="result-recommendation"></p>
+        <button id="retry-btn">다시하기</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
