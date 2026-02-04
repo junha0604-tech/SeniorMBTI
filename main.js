@@ -271,6 +271,9 @@ function showResult() {
     document.getElementById('result-title').innerText = resultData.title;
     document.getElementById('result-description').innerText = resultData.description;
     document.getElementById('result-recommendation').innerText = resultData.recommendation;
+    const resultImg = document.getElementById('result-img');
+    resultImg.src = resultData.character;
+    resultImg.alt = resultData.mbti;
 
     displayCompatibility(mbti);
     displayFacilityRecommendations(); // Call to display facility recommendations
@@ -287,13 +290,13 @@ function displayCompatibility(mbti) {
 
     goodMatchContainer.innerHTML = `
         <h3>찰떡궁합</h3>
-        <img src="characters/${goodMatchData.character}" alt="${goodMatchData.mbti}" class="mbti-character-img">
+        <img src="${goodMatchData.character}" alt="${goodMatchData.mbti}" class="mbti-character-img">
         <h4>${goodMatchData.mbti} - ${goodMatchData.title}</h4>
     `;
 
     badMatchContainer.innerHTML = `
         <h3>상극궁합</h3>
-        <img src="characters/${badMatchData.character}" alt="${badMatchData.mbti}" class="mbti-character-img">
+        <img src="${badMatchData.character}" alt="${badMatchData.mbti}" class="mbti-character-img">
         <h4>${badMatchData.mbti} - ${badMatchData.title}</h4>
     `;
 }
@@ -309,7 +312,7 @@ function showAllTypes() {
 
         typeDiv.innerHTML = `
             <h3>${type.mbti} - ${type.title}</h3>
-            <img src="characters/${type.character}" alt="${type.mbti} Character" class="mbti-character-img">
+            <img src="${type.character}" alt="${type.mbti} Character" class="mbti-character-img">
             <p class="description">${type.description}</p>
             <p class="recommendation">${type.recommendation}</p>
         `;
