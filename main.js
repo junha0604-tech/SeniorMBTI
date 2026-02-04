@@ -18,30 +18,34 @@ const questionText = document.getElementById('question-text');
 const answerBtns = document.querySelectorAll('.answer-btn');
 
 const questions = [
-    // E vs I
+    // E vs I (6 questions)
     { title: '① 사람 좋아함 vs 혼자가 최고', question: 'Q1. 엘리베이터에 나 말고 두 사람이 더 타 있다', answers: [{ text: '“날씨가 요즘 참…” 말문을 연다', type: 'E' }, { text: '숨소리도 줄인다', type: 'I' }] },
     { title: '① 사람 좋아함 vs 혼자가 최고', question: 'Q2. 아침 식사 후 누군가 커피 마시자고 한다', answers: [{ text: '“어디서요?” 바로 합류', type: 'E' }, { text: '“아… 오늘은 좀…”', type: 'I' }] },
     { title: '① 사람 좋아함 vs 혼자가 최고', question: 'Q3. 단지 산책 중 같은 분을 세 번째 마주쳤다', answers: [{ text: '“자주 뵙네요~”', type: 'E' }, { text: '‘아 또 마주치네…’', type: 'I' }] },
     { title: '① 사람 좋아함 vs 혼자가 최고', question: 'Q4. 공용 라운지에서 다 같이 TV를 본다', answers: [{ text: '중간중간 코멘트한다', type: 'E' }, { text: '조용히 보거나 자리를 피한다', type: 'I' }] },
     { title: '① 사람 좋아함 vs 혼자가 최고', question: 'Q5. 이웃이 “시간 괜찮으세요?”라고 묻는다', answers: [{ text: '웬만하면 괜찮다', type: 'E' }, { text: '일단 불안하다', type: 'I' }] },
-    // N vs S
-    { title: '② 현실파 vs 감성파', question: 'Q6. 상담사가 “여긴 다들 만족해하세요”라고 말한다', answers: [{ text: '“구체적으로 뭐가요?”', type: 'S' }, { text: '“아 그런 분위기구나”', type: 'N' }] },
-    { title: '② 현실파 vs 감성파', question: 'Q7. 실버타운 홍보 영상에서', answers: [{ text: '시설 수치가 눈에 들어온다', type: 'S' }, { text: '음악과 장면이 기억난다', type: 'N' }] },
-    { title: '② 현실파 vs 감성파', question: 'Q8. 같은 조건의 두 시설', answers: [{ text: '관리비 싼 곳', type: 'S' }, { text: '더 예쁜 곳', type: 'N' }] },
-    { title: '② 현실파 vs 감성파', question: 'Q9. ‘여기 살면 인생 2막입니다’라는 문구', answers: [{ text: '좀 오글거린다', type: 'S' }, { text: '괜히 설렌다', type: 'N' }] },
-    { title: '② 현실파 vs 감성파', question: 'Q10. 새로 도입한 스마트 시스템', answers: [{ text: '설명서부터 찾는다', type: 'S' }, { text: '일단 눌러본다', type: 'N' }] },
-    // T vs F
-    { title: '③ 이성형 vs 정 많은 형', question: 'Q11. 직원이 실수했다', answers: [{ text: '“다음엔 이런 일 없게 해주세요”', type: 'T' }, { text: '“괜찮아요, 그럴 수도 있죠”', type: 'F' }] },
-    { title: '③ 이성형 vs 정 많은 형', question: 'Q12. 같은 가격이면 더 중요한 건', answers: [{ text: '서비스 구성', type: 'T' }, { text: '사람 태도', type: 'F' }] },
-    { title: '③ 이성형 vs 정 많은 형', question: 'Q13. 상담 후 기억에 남는 건', answers: [{ text: '설명 내용', type: 'T' }, { text: '상담사 인상', type: 'F' }] },
-    { title: '③ 이성형 vs 정 많은 형', question: 'Q14. 불편한 점이 생겼다', answers: [{ text: '공식 절차로 접수', type: 'T' }, { text: '아는 직원에게 슬쩍', type: 'F' }] },
-    { title: '③ 이성형 vs 정 많은 형', question: 'Q15. 직원이 친절하지만 느리다', answers: [{ text: '답답하다', type: 'T' }, { text: '미워할 수 없다', type: 'F' }] },
-    // J vs P
-    { title: '④ 각 잡힌 인생 vs 되는대로 인생', question: 'Q16. 아침에 눈을 떴다', answers: [{ text: '오늘 일정이 머리에 있다', type: 'J' }, { text: '일단 일어나 본다', type: 'P' }] },
-    { title: '④ 각 잡힌 인생 vs 되는대로 인생', question: 'Q17. 식사 시간 알림이 울린다', answers: [{ text: '맞춰 간다', type: 'J' }, { text: '무시하고 있다가 간다', type: 'P' }] },
-    { title: '④ 각 잡힌 인생 vs 되는대로 인생', question: 'Q18. 프로그램 신청해놓고 당일이 됐다', answers: [{ text: '웬만하면 간다', type: 'J' }, { text: '가기 싫으면 안 간다', type: 'P' }] },
-    { title: '④ 각 잡힌 인생 vs 되는대로 인생', question: 'Q19. 갑자기 일정이 바뀌었다', answers: [{ text: '스트레스 받는다', type: 'J' }, { text: '뭐 그럴 수도', type: 'P' }] },
-    { title: '④ 각 잡힌 인생 vs 되는대로 인생', question: 'Q20. 내 방은', answers: [{ text: '물건 위치가 정해져 있다', type: 'J' }, { text: '찾을 수만 있으면 된다', type: 'P' }] },
+    { title: '① 사람 좋아함 vs 혼자가 최고', question: 'Q6. 경로당에서 처음 보는 사람이 말을 건다', answers: [{ text: '“네, 안녕하세요!”', type: 'E' }, { text: '인사만 하고 슬쩍 자리를 피한다', type: 'I' }] },
+    // N vs S (6 questions)
+    { title: '② 현실파 vs 감성파', question: 'Q7. 상담사가 “여긴 다들 만족해하세요”라고 말한다', answers: [{ text: '“구체적으로 뭐가요?”', type: 'S' }, { text: '“아 그런 분위기구나”', type: 'N' }] },
+    { title: '② 현실파 vs 감성파', question: 'Q8. 실버타운 홍보 영상에서', answers: [{ text: '시설 수치가 눈에 들어온다', type: 'S' }, { text: '음악과 장면이 기억난다', type: 'N' }] },
+    { title: '② 현실파 vs 감성파', question: 'Q9. 같은 조건의 두 시설', answers: [{ text: '관리비 싼 곳', type: 'S' }, { text: '더 예쁜 곳', type: 'N' }] },
+    { title: '② 현실파 vs 감성파', question: 'Q10. ‘여기 살면 인생 2막입니다’라는 문구', answers: [{ text: '좀 오글거린다', type: 'S' }, { text: '괜히 설렌다', type: 'N' }] },
+    { title: '② 현실파 vs 감성파', question: 'Q11. 새로 도입한 스마트 시스템', answers: [{ text: '설명서부터 찾는다', type: 'S' }, { text: '일단 눌러본다', type: 'N' }] },
+    { title: '② 현실파 vs 감성파', question: 'Q12. 새로운 건강 보조 식품이 나왔다', answers: [{ text: '성분과 후기부터 꼼꼼히 본다', type: 'S' }, { text: '‘왠지 효과 좋을 것 같아’', type: 'N' }] },
+    // T vs F (6 questions)
+    { title: '③ 이성형 vs 정 많은 형', question: 'Q13. 직원이 실수했다', answers: [{ text: '“다음엔 이런 일 없게 해주세요”', type: 'T' }, { text: '“괜찮아요, 그럴 수도 있죠”', type: 'F' }] },
+    { title: '③ 이성형 vs 정 많은 형', question: 'Q14. 같은 가격이면 더 중요한 건', answers: [{ text: '서비스 구성', type: 'T' }, { text: '사람 태도', type: 'F' }] },
+    { title: '③ 이성형 vs 정 많은 형', question: 'Q15. 상담 후 기억에 남는 건', answers: [{ text: '설명 내용', type: 'T' }, { text: '상담사 인상', type: 'F' }] },
+    { title: '③ 이성형 vs 정 많은 형', question: 'Q16. 불편한 점이 생겼다', answers: [{ text: '공식 절차로 접수', type: 'T' }, { text: '아는 직원에게 슬쩍', type: 'F' }] },
+    { title: '③ 이성형 vs 정 많은 형', question: 'Q17. 직원이 친절하지만 느리다', answers: [{ text: '답답하다', type: 'T' }, { text: '미워할 수 없다', type: 'F' }] },
+    { title: '③ 이성형 vs 정 많은 형', question: 'Q18. 이웃이 아침부터 문을 두드린다', answers: [{ text: '‘무슨 일이지?’ 사실부터 파악', type: 'T' }, { text: '‘무슨 일 있나?’ 걱정부터 한다', type: 'F' }] },
+    // J vs P (6 questions)
+    { title: '④ 각 잡힌 인생 vs 되는대로 인생', question: 'Q19. 아침에 눈을 떴다', answers: [{ text: '오늘 일정이 머리에 있다', type: 'J' }, { text: '일단 일어나 본다', type: 'P' }] },
+    { title: '④ 각 잡힌 인생 vs 되는대로 인생', question: 'Q20. 식사 시간 알림이 울린다', answers: [{ text: '맞춰 간다', type: 'J' }, { text: '무시하고 있다가 간다', type: 'P' }] },
+    { title: '④ 각 잡힌 인생 vs 되는대로 인생', question: 'Q21. 프로그램 신청해놓고 당일이 됐다', answers: [{ text: '웬만하면 간다', type: 'J' }, { text: '가기 싫으면 안 간다', type: 'P' }] },
+    { title: '④ 각 잡힌 인생 vs 되는대로 인생', question: 'Q22. 갑자기 일정이 바뀌었다', answers: [{ text: '스트레스 받는다', type: 'J' }, { text: '뭐 그럴 수도', type: 'P' }] },
+    { title: '④ 각 잡힌 인생 vs 되는대로 인생', question: 'Q23. 내 방은', answers: [{ text: '물건 위치가 정해져 있다', type: 'J' }, { text: '찾을 수만 있으면 된다', type: 'P' }] },
+    { title: '④ 각 잡힌 인생 vs 되는대로 인생', question: 'Q24. 일주일 식단표가 나왔다', answers: [{ text: '미리 보고 계획을 세운다', type: 'J' }, { text: '그때그때 먹고 싶은 걸 먹는다', type: 'P' }] },
 ];
 
 // Re-structured data for all 16 MBTI types, ensuring unique entries and character placeholders
@@ -198,6 +202,25 @@ const facilityData = [
     }
 ];
 
+const compatibility = {
+    'ISTJ': { good: 'ESFP', bad: 'ENFP' },
+    'ISFJ': { good: 'ESTP', bad: 'ENTP' },
+    'INFJ': { good: 'ENTP', bad: 'ESTP' },
+    'INTJ': { good: 'ENFP', bad: 'ESFP' },
+    'ISTP': { good: 'ESFJ', bad: 'ENFJ' },
+    'ISFP': { good: 'ESTJ', bad: 'ENTJ' },
+    'INFP': { good: 'ENFJ', bad: 'ESTJ' },
+    'INTP': { good: 'ENTJ', bad: 'ESFJ' },
+    'ESTP': { good: 'ISFJ', bad: 'INFJ' },
+    'ESFP': { good: 'ISTJ', bad: 'INTJ' },
+    'ENFP': { good: 'INTJ', bad: 'ISTJ' },
+    'ENTP': { good: 'INFJ', bad: 'ISFJ' },
+    'ESTJ': { good: 'ISFP', bad: 'INFP' },
+    'ESFJ': { good: 'INTP', bad: 'ISTP' },
+    'ENFJ': { good: 'INFP', bad: 'ISFP' },
+    'ENTJ': { good: 'INTP', bad: 'ISTP' },
+};
+
 let currentQuestionIndex = 0;
 let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
 
@@ -249,7 +272,30 @@ function showResult() {
     document.getElementById('result-description').innerText = resultData.description;
     document.getElementById('result-recommendation').innerText = resultData.recommendation;
 
+    displayCompatibility(mbti);
     displayFacilityRecommendations(); // Call to display facility recommendations
+}
+
+function displayCompatibility(mbti) {
+    const goodMatchMbti = compatibility[mbti].good;
+    const badMatchMbti = compatibility[mbti].bad;
+    const goodMatchData = results[goodMatchMbti];
+    const badMatchData = results[badMatchMbti];
+
+    const goodMatchContainer = document.getElementById('good-match');
+    const badMatchContainer = document.getElementById('bad-match');
+
+    goodMatchContainer.innerHTML = `
+        <h3>찰떡궁합</h3>
+        <img src="characters/${goodMatchData.character}" alt="${goodMatchData.mbti}" class="mbti-character-img">
+        <h4>${goodMatchData.mbti} - ${goodMatchData.title}</h4>
+    `;
+
+    badMatchContainer.innerHTML = `
+        <h3>상극궁합</h3>
+        <img src="characters/${badMatchData.character}" alt="${badMatchData.mbti}" class="mbti-character-img">
+        <h4>${badMatchData.mbti} - ${badMatchData.title}</h4>
+    `;
 }
 
 function showAllTypes() {
