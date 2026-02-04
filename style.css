@@ -80,6 +80,15 @@ button:hover {
     background-color: #2980b9;
 }
 
+.share-btn {
+    background-color: #3498db; /* Default button color */
+    margin-bottom: 10px; /* Space between share and retry button */
+}
+
+.share-btn:hover {
+    background-color: #2980b9; /* Darker on hover */
+}
+
 #retry-btn {
     background-color: #95a5a6;
 }

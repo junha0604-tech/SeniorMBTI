@@ -475,6 +475,26 @@ function displayFacilityRecommendations() {
 
 
 
+const shareBtn = document.getElementById('share-btn'); // New share button reference
+
+function handleShare() {
+    const mbtiResult = document.getElementById('result-mbti').innerText;
+    const resultTitle = document.getElementById('result-title').innerText;
+    const resultDescription = document.getElementById('result-description').innerText;
+    const shareUrl = window.location.origin; // Get the base URL of the application
+
+    const shareMessage = `나는 어떤 실버타운 인간형일까? 내 결과는 [${mbtiResult} - ${resultTitle}]!\n${resultDescription}\n테스트 해보기: ${shareUrl}`;
+
+    navigator.clipboard.writeText(shareMessage)
+        .then(() => {
+            alert('결과가 클립보드에 복사되었습니다. 친구에게 공유해보세요!');
+        })
+        .catch(err => {
+            console.error('클립보드 복사 실패:', err);
+            alert('클립보드 복사에 실패했습니다. 수동으로 복사해주세요.');
+        });
+}
+
 startBtn.addEventListener('click', startQuiz);
 
 retryBtn.addEventListener('click', () => {
@@ -484,6 +504,8 @@ retryBtn.addEventListener('click', () => {
 });
 
 viewAllTypesBtn.addEventListener('click', showAllTypes); // New event listener
+
+shareBtn.addEventListener('click', handleShare); // New event listener for share button
 
 allTypesBackBtn.addEventListener('click', () => { // New event listener
     allTypesScreen.style.display = 'none';
