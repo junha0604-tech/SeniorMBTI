@@ -55,112 +55,112 @@ const allMbtiTypesData = [
         title: '👑 허세형 귀족',
         description: '“이 나이에 아무 데나 들어갈 순 없지”\n로비 인테리어부터 본다\n가격 비싸면 오히려 안심',
         recommendation: '추천: 초고급·프리미엄 실버타운',
-        character: 'entj.png'
+        character: 'https://i.postimg.cc/SJKw5GR7/ENTJ.png'
     },
     {
         mbti: 'ESTJ',
         title: '🏰 관리자형 선임',
         description: '“규칙과 질서가 중요해”\n꼼꼼한 관리와 효율성을 추구\n시스템이 잘 갖춰진 곳 선호',
         recommendation: '추천: 운영 안정형 실버타운',
-        character: 'estj.png'
+        character: 'https://i.postimg.cc/75Fd58V3/ESTJ.png'
     },
     {
         mbti: 'ISTJ',
         title: '💸 구두쇠 실속형',
         description: '“비싼 데는 다 이유 없이 비싸”\n비용 대비 혜택 계산기 장착\n관리비에 민감',
         recommendation: '추천: 공공·합리형 실버타운',
-        character: 'istj.png'
+        character: 'https://i.postimg.cc/FfXC9brB/ISTJ.png'
     },
     {
         mbti: 'ESFJ',
         title: '🎤 동네 회장님형',
         description: '“사람은 모여 살아야지!”\n입주 3일 만에 아는 사람 20명\n프로그램 빠지면 섭섭',
         recommendation: '추천: 커뮤니티 대형 단지',
-        character: 'esfj.png'
+        character: 'https://i.postimg.cc/jLkGrJJL/ESFJ.png'
     },
     {
         mbti: 'INTP',
         title: '🛋 방콕 장인형',
         description: '“굳이 사람 많은 데서?”\n조용함이 최고 복지\n간섭 받는 거 제일 싫음',
         recommendation: '추천: 프라이빗·자율형',
-        character: 'intp.png'
+        character: 'https://i.postimg.cc/rKbYHXvw/INTP.png'
     },
     {
         mbti: 'ISTP',
         title: '🔧 만능 재주꾼',
         description: '“이건 내가 고칠 수 있겠는데?”\n실용적이고 독립적인 생활 선호\n개인 공간과 자유로운 활동 중요',
         recommendation: '추천: 독립형 구조 실버타운',
-        character: 'istp.png'
+        character: 'https://i.postimg.cc/67VjT7T9/ISTP.png'
     },
     {
         mbti: 'ISFJ',
         title: '🌸 정 많은 엄마형',
         description: '“밥은 먹었어? 약은 챙겼어?”\n직원 태도에 마음 열린다\n돌봄 중요',
         recommendation: '추천: 케어 중심 실버타운',
-        character: 'isfj.png'
+        character: 'https://i.postimg.cc/HryPDvgM/ISFJ.png'
     },
     {
         mbti: 'INFP',
         title: '🌿 힐링 자연인형',
         description: '“조용히 살다 가고 싶어…”\n산, 나무, 햇빛 중요\n시끄러운 거 싫음',
         recommendation: '추천: 자연 입지형',
-        character: 'infp.png'
+        character: 'https://i.postimg.cc/MX9Lyj59/INFP.png'
     },
     {
         mbti: 'ISFP',
         title: '🎨 예술가적 감성',
         description: '“아름다움과 편안함을 추구해요”\n자유로운 분위기에서 취미 활동 선호\n간섭 없는 독립적인 생활 중요',
         recommendation: '추천: 조용하고 예술 활동 가능한 실버타운',
-        character: 'isfp.png'
+        character: 'https://i.postimg.cc/nXDwbSJS/ISFP.png'
     },
     {
         mbti: 'ESFP',
         title: '🎉 인생은 지금형',
         description: '“늙어서까지 재미없을 필요 있나?”\n행사·여행·취미 없으면 무의미',
         recommendation: '추천: 액티비티 특화형',
-        character: 'esfp.png'
+        character: 'https://i.postimg.cc/9DRsXFG9/ESFP.png'
     },
     {
         mbti: 'INTJ',
         title: '🧠 똑똑한 고집형',
         description: '“내가 알아서 판단한다”\n아무 데나 안 간다\n수준 낮은 곳 질색',
         recommendation: '추천: 하이엔드·저밀도',
-        character: 'intj.png'
+        character: 'https://i.postimg.cc/jLCFvdkY/INTJ.png'
     },
     {
         mbti: 'ENFJ',
         title: '🤝 사람 챙기는 반장형',
         description: '“다 같이 잘 살아야지”\n공동체 중심\n입주민 역할 중요',
         recommendation: '추천: 참여형 커뮤니티',
-        character: 'enfj.png'
+        character: 'https://i.postimg.cc/4HfrX65V/ENFJ.png'
     },
     {
         mbti: 'ENFP',
         title: '🌟 분위기 메이커',
         description: '“새로운 사람들과의 만남이 즐거워요!”\n다양한 활동과 자극을 선호\n자유롭고 활기찬 분위기 중요',
         recommendation: '추천: 테마형·신개념 실버타운',
-        character: 'enfp.png'
+        character: 'https://i.postimg.cc/XXLRQPjg/ENFP.png'
     },
     {
         mbti: 'ESTP',
         title: '🏍️ 쿨한 도시인',
         description: '“촌스러우면 못 산다”\n접근성·편의시설 중요\n역동적인 도시 생활 선호',
         recommendation: '추천: 도심형 실버타운',
-        character: 'estp.png'
+        character: 'https://i.postimg.cc/dhbphPBS/ESTP.png'
     },
     {
         mbti: 'ENTP',
         title: '💡 말 많은 아이디어 뱅크',
         description: '“여기서 이런 것도 해보면 어때?”\n새로운 아이디어와 변화를 추구\n지적 호기심을 자극하는 환경 선호',
         recommendation: '추천: 혁신적인 프로그램의 실버타운',
-        character: 'entp.png'
+        character: 'https://i.postimg.cc/PPFBk8vB/ENTP.png'
     },
     {
         mbti: 'INFJ',
         title: '🔮 통찰력 있는 조언가',
         description: '“세상에 긍정적인 영향을 주고 싶어요”\n깊은 대화와 의미 있는 관계 중요\n조용하고 평화로운 환경 선호',
         recommendation: '추천: 사색과 성찰 중심 실버타운',
-        character: 'infj.png'
+        character: 'https://i.postimg.cc/CdhtB4jt/INFJ.png'
     }
 ];
 
