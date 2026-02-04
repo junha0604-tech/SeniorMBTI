@@ -184,9 +184,12 @@ button:hover {
 
 #facility-cards-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap; /* Change to nowrap for horizontal scrolling */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: flex-start; /* Align items to the top */
     gap: 1em; /* Space between cards */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding-bottom: 1em; /* Add some padding for scrollbar */
 }
 
 .facility-card {
@@ -197,10 +200,11 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
-    width: 100%; /* Full width on small screens */
-    max-width: 250px; /* Max width for individual cards */
+    min-width: 200px; /* Fixed width for horizontal display */
+    max-width: 200px; /* Fixed width for horizontal display */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     cursor: pointer;
+    flex-shrink: 0; /* Prevent cards from shrinking */
 }
 
 .facility-card:hover {
@@ -263,5 +267,30 @@ button:hover {
     font-size: 1em;
     margin-top: 0.5em;
     margin-bottom: 0;
+}
+
+.bottom-banner {
+    display: block;
+    background-color: #f39c12; /* A warm, inviting color */
+    color: white;
+    padding: 1.5em;
+    margin-top: 2em;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.bottom-banner:hover {
+    background-color: #e67e22; /* Slightly darker on hover */
+}
+
+.bottom-banner h2 {
+    color: white; /* Ensure text remains white */
+    margin: 0;
+    font-size: 1em; /* Adjust font size to fit banner */
 }
 
