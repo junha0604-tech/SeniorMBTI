@@ -387,7 +387,7 @@ function showResult() {
     resultImg.alt = resultData.mbti;
 
     displayCompatibility(mbti);
-    displayFacilityRecommendations(); // Call to display facility recommendations
+
 }
 
 function displayCompatibility(mbti) {
