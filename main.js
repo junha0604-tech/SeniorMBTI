@@ -170,35 +170,146 @@ const results = allMbtiTypesData.reduce((map, type) => {
     return map;
 }, {});
 
-// Dummy data for facility recommendations
 const facilityData = [
     {
-        name: '서울시니어스타워 가양',
-        image: 'https://finding-facilities.pages.dev/images/seoul_gayang.webp',
-        description: '도심 속 자연을 누리는 프리미엄 실버타운',
-        location: '서울 강서구',
-        link: 'https://finding-facilities.pages.dev/#seoul-gayang'
+        name: '서울특별시 더클래식500',
+        link: 'https://www.caredoc.kr/facility/%EB%8D%94%ED%81%B4%EB%9E%98%EC%8B%9D500-SVT-a1eccc58dc?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-a1eccc58dc/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%203@(w1920_q80_fwebp).png'
     },
     {
-        name: '더클래식 500',
-        image: 'https://finding-facilities.pages.dev/images/theclassic500.webp',
-        description: '고품격 주거와 의료, 문화시설을 갖춘 럭셔리 시니어 복합단지',
-        location: '서울 광진구',
-        link: 'https://finding-facilities.pages.dev/#theclassic500'
+        name: '서울시니어스 강남타워',
+        link: 'https://www.caredoc.kr/facility/%EC%84%9C%EC%9A%B8%EC%8B%9C%EB%8B%88%EC%96%B4%EC%8A%A4%EA%B0%95%EB%82%A8%ED%83%80%EC%9B%8C-SVT-eabbd660de?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-eabbd660de/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).jpg'
     },
     {
-        name: '정원속궁전',
-        image: 'https://finding-facilities.pages.dev/images/garden_palace.webp',
-        description: '아름다운 정원과 함께하는 편안한 노년',
-        location: '경기 용인시',
-        link: 'https://finding-facilities.pages.dev/#garden-palace'
+        name: '서울시니어스 가양타워',
+        link: 'https://www.caredoc.kr/facility/%EC%84%9C%EC%9A%B8%EC%8B%9C%EB%8B%88%EC%96%B4%EC%8A%A4%EA%B0%80%EC%96%91%ED%83%80%EC%9B%8C-SVT-7fda8e4612?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-7fda8e4612/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).jpg'
     },
     {
-        name: '삼성노블카운티',
-        image: 'https://finding-facilities.pages.dev/images/samsung_noblecounty.webp',
-        description: '삼성생명이 운영하는 도심형 종합복지단지',
-        location: '경기 용인시',
-        link: 'https://finding-facilities.pages.dev/#samsung-noblecounty'
+        name: '서울시니어스 강서타워',
+        link: 'https://www.caredoc.kr/facility/%EC%84%9C%EC%9A%B8%EC%8B%9C%EB%8B%88%EC%96%B4%EC%8A%A4%EA%B0%95%EC%84%9C%ED%83%80%EC%9B%8C-SVT-0b1a0236dc?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-0b1a0236dc/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).jpg'
+    },
+    {
+        name: '서울시니어스 서울타워',
+        link: 'https://www.caredoc.kr/facility/%EC%84%9C%EC%9A%B8%EC%8B%9C%EB%8B%88%EC%96%B4%EC%8A%A4%EC%84%9C%EC%9A%B8%ED%83%80%EC%9B%8C-SVT-7b66cedb59?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-7b66cedb59/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).jpg'
+    },
+    {
+        name: '더시그넘하우스(강남)',
+        link: 'https://www.caredoc.kr/facility/%EB%8D%94%EC%8B%9C%EA%B7%B8%EB%84%98%ED%95%98%EC%9A%B0%EC%8A%A4%EA%B0%95%EB%82%A8-SVT-1553710a93?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-1553710a93/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).png'
+    },
+    {
+        name: '노블레스타워',
+        link: 'https://www.caredoc.kr/facility/%EB%85%B8%EB%B8%94%EB%A0%88%EC%8A%A4%ED%83%80%EC%9B%8C-SVT-45b683b4d0?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-45b683b4d0/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).jpg'
+    },
+    {
+        name: '하이원빌리지',
+        link: 'https://www.caredoc.kr/facility/%ED%95%98%EC%9D%B4%EC%9B%90%EB%B9%8C%EB%A6%AC%EC%A7%80-SVT-1f96e31759?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-1f96e31759/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).png'
+    },
+    {
+        name: '케어닥케어홈 배곧점 1호점',
+        link: 'https://www.caredoc.kr/facility/%EC%BC%80%EC%96%B4%EB%8B%A5%EC%BC%80%EC%96%B4%ED%99%88-%EB%B0%B0%EA%B3%A7%EC%A0%901%EA%B4%80-SVT-3b5d86d3dc?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-3b5d86d3dc/%EC%99%B8%EA%B4%80/00002_%EB%B0%B0%EA%B3%A7%EC%8B%A0%EB%8F%84%EC%8B%9C%EC%A0%90%201%EA%B4%80_%EC%99%B8%EA%B4%80%202@(w1920_q80_fwebp).jpg'
+    },
+    {
+        name: '케어닥케어홈 송추점',
+        link: 'https://www.caredoc.kr/facility/%EC%BC%80%EC%96%B4%EB%8B%A5%EC%BC%80%EC%96%B4%ED%99%88-%EC%86%A1%EC%B6%94%EC%A0%90-SVT-f0f3acbec4?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-f0f3acbec4/%EC%99%B8%EA%B4%80/00001_%EC%86%A1%EC%B6%94%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8%EC%A0%90%20_%EC%99%B8%EA%B4%80%202@(w1920_q80_fwebp).jpg'
+    },
+    {
+        name: '케어닥케어홈 용인점',
+        link: 'https://www.caredoc.kr/facility/%EC%BC%80%EC%96%B4%EB%8B%A5%EC%BC%80%EC%96%B4%ED%99%88-%EC%9A%A9%EC%9D%B8%EC%A0%90-SVT-3d77c325a8?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-3d77c325a8/%EC%99%B8%EA%B4%80/00002_%EC%9A%A9%EC%9D%B8%EB%8D%94%ED%8D%BC%EC%8A%A4%ED%8A%B8%EC%A0%90_%EC%99%B8%EA%B4%80%202@(w1920_q80_fjpg).jpg'
+    },
+    {
+        name: '삼성노블카운티 (ILU)',
+        link: 'https://www.caredoc.kr/facility/%EC%82%BC%EC%84%B1%EB%85%B8%EB%B8%94%EC%B9%B4%EC%9A%B4%ED%8B%B0ilu-SVT-1bf6d69e42?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-1bf6d69e42/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201@(w1920_q80_fwebp).png'
+    },
+    {
+        name: '삼성노블카운티 (ALU)',
+        link: 'https://www.caredoc.kr/facility/%EC%82%BC%EC%84%B1%EB%85%B8%EB%B8%94%EC%B9%B4%EC%9A%B4%ED%8B%B0alu-SVT-b455aaa01c?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-b455aaa01c/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201@(w1920_q80_fwebp).png'
+    },
+    {
+        name: '서울시니어스 분당타워',
+        link: 'https://www.caredoc.kr/facility/%EC%84%9C%EC%9A%B8%EC%8B%9C%EB%8B%88%EC%96%B4%EC%8A%A4%EB%B6%84%EB%8B%B9%ED%83%80%EC%9B%8C-SVT-30c9b20e0a?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-30c9b20e0a/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).png'
+    },
+    {
+        name: '더시그넘하우스(청라)',
+        link: 'https://www.caredoc.kr/facility/%EB%8D%94%EC%8B%9C%EA%B7%B8%EB%84%98%ED%95%98%EC%9A%B0%EC%8A%A4%EC%B2%AD%EB%9D%BC-SVT-2c75792336?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-2c75792336/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).jpg'
+    },
+    {
+        name: '백운호수 푸르지오 숲속의 아침 1단지',
+        link: 'https://www.caredoc.kr/facility/%EB%B0%B1%EC%9A%B4%ED%98%B8%EC%88%98-%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4%EC%88%B2%EC%86%8D%EC%9D%98-%EC%95%84%EC%B9%A81%EB%8B%A8%EC%A7%80-SVT-5950055c5a?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-5950055c5a/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201@(w1920_q80_fwebp).jpg'
+    },
+    {
+        name: '백운호수 푸르지오 숲속의 아침 2단지',
+        link: 'https://www.caredoc.kr/facility/%EB%B0%B1%EC%9A%B4%ED%98%B8%EC%88%98-%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4%EC%88%B2%EC%86%8D%EC%9D%98-%EC%95%84%EC%B9%A82%EB%8B%A8%EC%A7%80-SVT-3433616e51?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-3433616e51/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201@(w1920_q80_fwebp).jpg'
+    },
+    {
+        name: '유당실버타운',
+        link: 'https://www.caredoc.kr/facility/%EC%9C%A0%EB%8B%B9%EC%8B%A4%EB%B2%84%ED%83%80%EC%9A%B4-SVT-968432ff6c?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-968432ff6c/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).jpg'
+    },
+    {
+        name: '유당케어홈',
+        link: 'https://www.caredoc.kr/facility/%EC%9C%A0%EB%8B%B9%EC%BC%80%EC%96%B4%ED%99%88-SVT-2c8d1fb4ca?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-2c8d1fb4ca/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).jpg'
+    },
+    {
+        name: '위례심포니아',
+        link: 'https://www.caredoc.kr/facility/%EC%9C%84%EB%A1%80%EC%8B%AC%ED%8F%AC%EB%8B%88%EC%95%84-SVT-144e2249d1?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-144e2249d1/%EC%99%B8%EA%B4%80/00001_%EC%99%B8%EA%B4%80%201@(w1920_q80_fwebp).jpg'
+    },
+    {
+        name: 'VL 라우어(오시리아)',
+        link: 'https://www.caredoc.kr/facility/vl%EB%9D%BC%EC%9A%B0%EC%96%B4%EC%98%A4%EC%8B%9C%EB%A6%AC%EC%95%84-SVT-07976ff9de?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-07976ff9de/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).png'
+    },
+    {
+        name: '라티브(오시리아)',
+        link: 'https://www.caredoc.kr/facility/%EB%9D%BC%ED%8B%B0%EB%B8%8C%EC%98%A4%EC%8B%9C%EB%A6%AC%EC%95%84-SVT-9d3e46f2b5?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-9d3e46f2b5/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).png'
+    },
+    {
+        name: '마리스텔라',
+        link: 'https://www.caredoc.kr/facility/%EB%A7%88%EB%A6%AC%EC%8A%A4%ED%85%94%EB%9D%BC-SVT-2cde772ee1?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-2cde772ee1/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).jpg'
+    },
+    {
+        name: '청심빌리지',
+        link: 'https://www.caredoc.kr/facility/%EC%B2%AD%EC%8B%AC%EB%B9%8C%EB%A6%AC%EC%A7%80-SVT-7dc620c548?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-7dc620c548/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).jpg'
+    },
+    {
+        name: '사이언스빌리지',
+        link: 'https://www.caredoc.kr/facility/%EC%82%AC%EC%9D%B4%EC%96%B8%EC%8A%A4%EB%B9%8C%EB%A6%AC%EC%A7%80-SVT-e4fa852e8f?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-e4fa852e8f/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).png'
+    },
+    {
+        name: '노블파인스',
+        link: 'https://www.caredoc.kr/facility/%EB%85%B8%EB%B8%94%ED%8C%8C%EC%9D%B8%EC%8A%A4-SVT-81f663e9a3?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-81f663e9a3/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).png'
+    },
+    {
+        name: 'KB골든라이프 평창카운티',
+        link: 'https://www.caredoc.kr/facility/kb%EA%B3%A8%EB%93%A0%EB%9D%BC%EC%9D%B4%ED%94%84%EC%BC%80%EC%96%B4%ED%8F%89%EC%B0%BD-%EC%B9%B4%EC%9A%B4%ED%8B%B0-SVT-9b78e72c15?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-9b78e72c15/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%A9%94%EC%9D%B8)@(w1920_q80_fwebp).jpg'
+    },
+    {
+        name: 'VL르웨스트 마곡',
+        link: 'https://www.caredoc.kr/facility/vl%EB%A5%B4%EC%9B%A8%EC%8A%A4%ED%8A%B8%EB%A7%88%EA%B3%A1-SVT-fad8d13d5a?facilityType=SILVER_TOWN&isRouter=true',
+        image: 'https://cache.caredoc.kr/caredoc-home/facility/svt/20251125/SVT-fad8d13d5a/%EC%99%B8%EA%B4%80/%EC%99%B8%EA%B4%80%201(%EB%8C%80%ED%91%9C)@(w1920_q80_fwebp).jpg'
     }
 ];
 
@@ -323,23 +434,45 @@ function showAllTypes() {
 function displayFacilityRecommendations() {
     facilityCardsContainer.innerHTML = ''; // Clear previous content
 
-    facilityData.forEach(facility => {
+    // Shuffle the facility data
+    const shuffledFacilities = [...facilityData].sort(() => 0.5 - Math.random());
+
+    // Take the first 4
+    const selectedFacilities = shuffledFacilities.slice(0, 4);
+
+    selectedFacilities.forEach(facility => {
         const facilityCard = document.createElement('a'); // Use 'a' tag for clickable card
         facilityCard.href = facility.link;
         facilityCard.target = '_blank'; // Open in new tab
         facilityCard.classList.add('facility-card');
 
+        // Dynamically determine description and location
+        let name = facility.name;
+        let description = '프리미엄 실버타운';
+        let location = '상세정보 확인';
+
+        if (name.includes('(') && name.includes(')')) {
+            const parts = name.split('(');
+            name = parts[0];
+            location = parts[1].replace(')', '');
+        }
+
+        if (name.includes('서울')) {
+            location = '서울';
+        }
+
         facilityCard.innerHTML = `
-            <img src="${facility.image}" alt="${facility.name}" class="facility-card-img">
+            <img src="${facility.image}" alt="${name}" class="facility-card-img">
             <div class="facility-card-content">
-                <h4>${facility.name}</h4>
-                <p class="facility-description">${facility.description}</p>
-                <p class="facility-location">${facility.location}</p>
+                <h4>${name}</h4>
+                <p class="facility-description">${description}</p>
+                <p class="facility-location">${location}</p>
             </div>
         `;
         facilityCardsContainer.appendChild(facilityCard);
     });
 }
+
 
 
 startBtn.addEventListener('click', startQuiz);
